@@ -8,10 +8,12 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 module.exports = merge(common, {
   mode: 'production',
   devtool: false,
+  target: ['web', 'es5'], // remove arrow functions from bundle.js
   output: {
     path: paths.build,
     publicPath: '/',
-    filename: 'js/[name].[contenthash].bundle.js',
+    // filename: 'js/[name].[contenthash].bundle.js',
+    filename: 'js/[name].bundle.js',
   },
   plugins: [
     // Extracts CSS into separate files
