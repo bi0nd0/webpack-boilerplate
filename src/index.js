@@ -25,7 +25,6 @@ const test = new Test()
 try {
   test.getTodos()
   // test.getPreview()
-  test.confetti()
 
 } catch (error) {
   console.log(error)
